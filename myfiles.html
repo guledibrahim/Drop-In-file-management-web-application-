@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>My Files</title>
+<link rel="stylesheet" href="myfiles.css" media="screen" meta http-equiv="content-type" type="text/css" content="text/html" charset=UTF-8"/>
+</head>
+<body>
+
+<div class="header">
+</div>
+
+    <div class="headerContentlogo">
+        <center>
+        <a href="index.html">
+        <img src="clouds3.png" alt="dropin logo" title="Dropin logo"/>
+        </a>
+        
+        <b><?php
+  session_start();
+  echo "Welcome: ".$_SESSION['username'];
+ ?></b>
+        </div>
+
+
+        <div class="nav">
+          <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="myhub.php">My Files</a> </li>
+          <li><a href="logout.php">Logout</a></li>
+         </ul>
+          
+      </div>
+<hr>
+<div class="upload">
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Upload Files Here:<b>
+ <form action="upload.php" method="post" enctype="multipart/form-data">
+       <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="submit" value="Upload file">
+    </form>
+</div>
+<div class="hr_nav">
+<hr>
+
+</body>
+</html>
